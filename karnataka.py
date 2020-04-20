@@ -3,10 +3,10 @@ import requests, re, datetime, json
 
 if (sys.version_info[0] < 3):
     import HTMLParser
-    unescape = HTMLParser.HTMLParser.unescape
+    html = HTMLParser.HTMLParser
 else:
     import html
-    unescape = html.unescape
+
 
 STATE = "karnataka"
 
@@ -19,7 +19,7 @@ r = requests.get(URL)
 m = re.findall("https.*?\.pdf", r.text)
 
 for i in m:
-    u = unescape(i)
+    u = html.unescape(i)
     try:
         print(u)
         if u in urls:
