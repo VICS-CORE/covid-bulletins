@@ -1,12 +1,4 @@
-import sys
-import requests, re, datetime, json
-
-if (sys.version_info[0] < 3):
-    import HTMLParser
-    html = HTMLParser.HTMLParser
-else:
-    import html
-
+import requests, re, datetime, json, html
 
 STATE = "karnataka"
 
