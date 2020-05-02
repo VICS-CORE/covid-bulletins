@@ -6,7 +6,7 @@ with open(STATE + ".json") as f:
     l = json.loads(f.read())
 urls = set([i['url'] for i in l])
 
-URL = "https://covid19.karnataka.gov.in/new-page/Media%20Bulletin/en"
+URL = "https://covid19.karnataka.gov.in/new-page/Health%20Department%20Bulletin/en"
 r = requests.get(URL)
 m = re.findall("https.*?\.pdf", r.text)
 
